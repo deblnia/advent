@@ -19,3 +19,14 @@ def q2(l):
                     print(i*j*k)
                     return
 q2(l)
+
+### more efficient solution ### 
+def q1Efficient(l):
+    remainingMap = {}
+    for i in l:
+        remainingMap[2020 - i] = i
+    for i in l:
+        if i in remainingMap:
+            print(remainingMap[i] * i)
+            break
+q1Efficient(l) 
