@@ -4,7 +4,9 @@ Advent of Code
 ```
 .
 ├── 2020
-│   └── dayone.py
+│   └── day-one
+│       ├── dayone.py
+│       └── input.txt
 └── README.md
 
 ```
