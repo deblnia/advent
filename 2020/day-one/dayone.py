@@ -29,4 +29,4 @@ def q1Efficient(l):
         if i in remainingMap:
             print(remainingMap[i] * i)
             break
-q1Efficient(l) 
+q1Efficient(l)
