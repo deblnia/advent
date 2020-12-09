@@ -8,13 +8,13 @@ expect = %w(byr iyr eyr hgt hcl ecl pid) # getting words
 
 # part 1 
 
-puts passes.count { |pass| # sets parameters 
+PART1 = passes.count { |pass| # sets parameters 
     expect.all? { |field| pass.match?(/#{field}:\S+/)} # regexing 
 }
 
-# part 2 
+puts 'Part 1: %d' % PART1
 
-DATA = File.read('input.txt').split("\n\n").map{ |line| line.gsub("\n", " ") }
+# part 2 
 
 def valid_height? h
     case h
@@ -27,7 +27,7 @@ def valid_height? h
     end
 end
 
-PART2 = DATA.count do |passport|
+PART2 = passes.count do |passport|
     vals = passport.scan(/(...):([\w\d#]+)/).to_h
     [
         vals["byr"].to_i.between?(1920, 2002),
